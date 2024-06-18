@@ -1,0 +1,400 @@
+@font-face {
+  font-family: 'UncerFelt';
+  src: url('/fonts/uncertain_felttip_fat-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FeltWoman';
+  src: url('/fonts/felt-tip-woman.ttf') format('truetype');
+}
+
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.screen{
+  width: 100%;
+  height: 100%;
+  display: none;
+  text-align: center;
+  font-size: xx-large;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.active{
+  display: block;
+}
+
+.zero{
+  background-image: url('/0.webp');
+}
+
+.langSelector{
+  /* border: solid 1px gray; */
+  width: 20rem;
+  height: 5rem;
+  position: absolute;
+  bottom: 4rem;
+}
+
+.one{
+  background-image: url('/1.webp');
+}
+
+.oneen{
+  background-image: url('/1en.webp');
+}
+
+.two{
+  background-image: url('/2.webp');
+}
+
+.twoen{
+  background-image: url('/2en.webp');
+}
+
+.phone{
+  position: absolute;
+    bottom: 4.1rem;
+    height: 4rem;
+    width: 45vw;
+    left: 16.7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: 'UncerFelt';
+    font-size: xxx-large;
+    font-weight: 900;
+    text-align: center;
+}
+
+.phone:focus{
+  outline: none;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { margin-left: 0; }
+  25% { margin-left: -5px; }
+  50% { margin-left: 5px; }
+  75% { margin-left: -5px; }
+  100% { margin-left: 0; }
+}
+
+.go-step-3{
+  position: absolute;
+  /* border: solid 1px gray; */
+  width: 13rem;
+  height: 11rem;
+  bottom: 0;
+  right: 0;
+}
+
+.three{
+  background-image: url('/3.webp');
+}
+
+.threeen{
+  background-image: url('/3en.webp');
+}
+
+.grid-sound-track{
+  width: 100vw;
+  height: 100vh;
+  display: ruby-text;
+  /* align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+}
+
+.sound-track{
+  /* border: solid 1px gray; */
+  width: calc(25% - 2rem);
+  height: 10rem;
+  box-sizing: border-box;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.track-selected{
+  background-image: url('/active.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.four{
+  background-image: url('/4.webp');
+}
+
+.needle{
+  /* border: solid 1px gray; */
+  width: 12rem;
+  height: 22rem;
+  position: absolute;
+  left: 49%;
+  top: 24%;
+  background-image: url('/needle.webp');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.disc{
+  /* border: solid 1px gray; */
+  width: 22rem;
+  height: 23rem;
+  position: absolute;
+  left: 33%;
+  top: 23%;
+  background-image: url('/disc.webp');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: girarDisco 5s linear infinite; 
+}
+
+@keyframes girarDisco {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.timeline{
+  /* border: solid 2px red; */
+  position: absolute;
+  height: 5.7rem;
+  top: 56.1%;
+  left: 15.5%;
+  border-radius: 30px;
+  background: #e6dcca;
+  display: none;
+  /* animation: aumentarAncho 30s steps(30) forwards;  */
+}
+
+.timeline-active{
+  display: block !important;
+}
+
+.timeline-song-0 {
+  width: 0rem;
+  animation: aumentarAncho 30s steps(30) forwards;
+}
+
+.timeline-song-1 {
+  width: 0rem;
+  animation: aumentarAncho 30s steps(30) forwards;
+}
+
+.timeline-song-2 {
+  width: 0rem;
+  animation: aumentarAncho 30s steps(30) forwards;
+}
+
+@keyframes aumentarAncho {
+  to { width: 44rem; } /* Ancho final (ajústalo según tus necesidades) */
+}
+
+.trackSelected{
+  /* border: solid 1px blue; */
+  width: 40rem;
+  position: absolute;
+  height: 20rem;
+  top: 70%;
+  left: 17%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-1{
+  background-image: url('/track/1.png');
+}
+
+.bg-2{
+  background-image: url('/track/2.png');
+}
+
+.bg-3{
+  background-image: url('/track/3.png');
+}
+
+.bg-4{
+  background-image: url('/track/4.png');
+}
+
+.bg-5{
+  background-image: url('/track/5.png');
+}
+
+.bg-6{
+  background-image: url('/track/6.png');
+}
+
+.bg-7{
+  background-image: url('/track/7.png');
+}
+
+.bg-8{
+  background-image: url('/track/8.png');
+}
+
+.bg-9{
+  background-image: url('/track/9.png');
+}
+
+.bg-10{
+  background-image: url('/track/10.png');
+}
+
+.bg-11{
+  background-image: url('/track/11.png');
+}
+
+.bg-12{
+  background-image: url('/track/12.png');
+}
+
+.bg-13{
+  background-image: url('/track/13.png');
+}
+
+.bg-14{
+  background-image: url('/track/14.png');
+}
+
+.bg-15{
+  background-image: url('/track/15.png');
+}
+
+.bg-16{
+  background-image: url('/track/16.png');
+}
+
+.bg-17{
+  background-image: url('/track/17.png');
+}
+
+.bg-18{
+  background-image: url('/track/18.png');
+}
+
+.bg-19{
+  background-image: url('/track/19.png');
+}
+
+.bg-20{
+  background-image: url('/track/20.png');
+}
+
+.bg-21{
+  background-image: url('/track/21.png');
+}
+
+.bg-22{
+  background-image: url('/track/22.png');
+}
+
+.bg-23{
+  background-image: url('/track/23.png');
+}
+
+.bg-24{
+  background-image: url('/track/24.png');
+}
+
+.name{
+  font-family: 'FeltWoman';
+  color: #e6dcca;
+  font-size: 3.7rem;
+  width: 42vw;
+  height: 10rem;
+  line-height: 4rem;
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  left: 29%;
+}
+
+.five{
+  background-image: url('/5.webp');
+}
+
+.fiveen{
+  background-image: url('/5en.webp');
+}
+
+.timeline-video{
+  /* border: solid 2px red; */
+  position: absolute;
+  /* width: 0rem; */
+  height: 5rem;
+  left: 13%;
+  bottom: 3.3rem;
+  border-radius: 30px;
+  background: #e6dcca;
+  /* animation: aumentarAnchoVideo 15s steps(20) forwards;  */
+}
+
+.timeline-video-active{
+  width: 0rem;
+  animation: aumentarAnchoVideo 15s steps(20) forwards;
+}
+
+@keyframes aumentarAnchoVideo {
+  to { width: 39rem; } /* Ancho final (ajústalo según tus necesidades) */
+}
+
+video {
+  /* width: 100vw;
+  height: 110vh;
+  object-fit: cover; */
+  position: absolute;
+  left: 10%;
+  right: 0;
+  top: 19%;
+  bottom: 0;
+  /* z-index: -1; */
+}
+
+.text-callback{
+  font-family: 'UncerFelt', 'FeltWoman';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4.6rem;
+  font-weight: 700;
+  background-color: #000;
+  color: #e6dcca;
+  position: absolute;
+  z-index: 2;
+  width: 820px;
+  height: 890px;
+  top: 18%;
+  left: 10%;
+}
+
+.text-callback p{
+  margin-top: 40%;
+}
+
+.text-callback-inactive{
+  display: none !important;
+}
+
+.six{
+  background-image: url('/6.webp');
+}
+
+.sixen{
+  background-image: url('/6en.webp');
+}
