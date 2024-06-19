@@ -4,7 +4,7 @@ import axios from 'axios';
 import './App.css';
 
 function App() {
-  const [screenActive, setScreenActive] = useState(0);
+  const [screenActive, setScreenActive] = useState(6);
   const [lang, setLang] = useState('');
   const [soundTrack, setSoundTrack] = useState<number[]>([]);
   const [playTrack, setPlayTrack] = useState(0);
@@ -22,8 +22,8 @@ function App() {
   const mediaRecorderRef: React.MutableRefObject<MediaRecorder | null> = useRef(null);
   
   const videoConstraints = {
-    width: 1310,
-    height: 1410,
+    width: 800 ,
+    height: 600,
     facingMode: 'user',
   };
 
@@ -92,10 +92,9 @@ function App() {
               <div className={`sound-track ${soundTrack.includes(18) && 'track-selected'}`} onClick={() => { handleAddTrack(18); }}></div>
               <div className={`sound-track ${soundTrack.includes(19) && 'track-selected'}`} onClick={() => { handleAddTrack(19); }}></div>
               <div className={`sound-track ${soundTrack.includes(20) && 'track-selected'}`} onClick={() => { handleAddTrack(20); }}></div>
-              {/*<div className={`sound-track ${soundTrack.includes(21) && 'track-selected'}`} onClick={() => { handleAddTrack(21); }}></div>
-              <div className={`sound-track ${soundTrack.includes(22) && 'track-selected'}`} onClick={() => { handleAddTrack(22); }}></div>
-              <div className={`sound-track ${soundTrack.includes(23) && 'track-selected'}`} onClick={() => { handleAddTrack(23); }}></div>
-              <div className={`sound-track ${soundTrack.includes(24) && 'track-selected'}`} onClick={() => { handleAddTrack(24); }}></div> */}
+            </div>
+            <div className="msn-three">
+              {lang === 'en' ? <p>select three soundtracks</p> : <p>selecciona tres soundtracks</p>}
             </div>
           </div>
         )
@@ -375,8 +374,8 @@ function App() {
       {screenActive >= 3 &&
       <div className='webcam-container' style={{zIndex:screenActive === 5 ? '1' : '-1'}}>
         <Webcam
-          width={'1310'}
-          height={'1410'}
+          width={'100%'}
+          height={'100%'}
           style={{ objectFit: 'fill' }}
           audio
           ref={webcamRef}
