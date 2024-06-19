@@ -4,7 +4,7 @@ import axios from 'axios';
 import './App.css';
 
 function App() {
-  const [screenActive, setScreenActive] = useState(6);
+  const [screenActive, setScreenActive] = useState(0);
   const [lang, setLang] = useState('');
   const [soundTrack, setSoundTrack] = useState<number[]>([]);
   const [playTrack, setPlayTrack] = useState(0);
