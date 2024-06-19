@@ -47,7 +47,7 @@
   width: 20rem;
   height: 5rem;
   position: absolute;
-  bottom: 1rem;
+  bottom: 5rem;
 }
 
 .one{
@@ -68,7 +68,7 @@
 
 .phone{
   position: absolute;
-  bottom: 1.2rem;
+  bottom: 5rem;
   max-height: 3rem;
   width: 19rem;
   left: 15rem;
@@ -102,7 +102,7 @@
   /* border: solid 1px gray; */
   width: 14rem;
   height: 5rem;
-  bottom: 1rem;
+  bottom: 5rem;
   right: 1rem;
 }
 
@@ -156,7 +156,7 @@
   position: absolute;
   width: 71%;
   height: 63%;
-  top: 22%;
+  top: 20%;
 }
 
 .four{
@@ -200,7 +200,7 @@
   /* border: solid 2px red; */
   position: absolute;
   height: 4.5rem;
-  top: 58.8%;
+  top: 55.3%;
   left: 19%;
   border-radius: 30px;
   background: #e6dcca;
@@ -366,7 +366,7 @@
   /* width: 0rem; */
   height: 4.1rem;
   left: 16%;
-  bottom: .9rem;
+  bottom: 5rem;
   border-radius: 30px;
   background: #e6dcca;
   /* animation: aumentarAnchoVideo 15s steps(20) forwards;  */
@@ -405,7 +405,7 @@
   z-index: 2;
   width: 71%;
   height: 63%;
-  top: 22.5%;
+  top: 20%;
   left: 14%;
 }
 
