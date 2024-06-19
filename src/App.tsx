@@ -34,8 +34,7 @@ function App() {
       case 0://screen zero [ OK ]
         return(
           <div 
-            className={`screen ${ screenActive === 0 && 'active' } zero`} 
-            onClick={() => setScreenActive(1)}
+            className={`screen ${ screenActive === 0 && 'active' } zero`}
           >
             <div className="langSelector" onClick={() => setScreenActive(1)} style={{right:'4rem'}}></div>
             <div className="langSelector" onClick={() => {setLang('en'); setScreenActive(1);}} style={{left:'3rem'}}></div>
