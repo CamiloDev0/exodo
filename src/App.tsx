@@ -62,7 +62,7 @@ function App() {
               type="phone" 
               className={`phone ${ !phoneValid && 'shake' }`}
               placeholder='(555) 1234-5678'
-              onChange={handleInput}
+              onChange={(e) => formatPhoneNumber(e.target.value)}
               ref={inputRef}
               autoFocus={screenActive === 2}
             />
@@ -141,20 +141,27 @@ function App() {
     }
   }
 
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const formattedValue = formatPhoneNumber(event.target.value);
-    if(inputRef.current){
-      inputRef.current.value = formattedValue;
-      setPhone(formattedValue);
-    }
-  };
-
   const formatPhoneNumber = (input: string): string => {
     const digits = input.replace(/\D/g, '');
+    
     const trimmedDigits = digits.substring(0, 10);
-    const formatted = `(${trimmedDigits.substring(0, 3)}) ${trimmedDigits.substring(3, 6)}-${trimmedDigits.substring(6)}`;
+    
+    let formatted = '';
+    if (trimmedDigits.length > 0) {
+      formatted = `(${trimmedDigits.substring(0, 3)}`;
+    }
+    if (trimmedDigits.length > 3) {
+      formatted += `) ${trimmedDigits.substring(3, 6)}`;
+    }
+    if (trimmedDigits.length > 6) {
+      formatted += `-${trimmedDigits.substring(6)}`;
+    }
+    
+    if (inputRef.current) inputRef.current.value = formatted;
+    setPhone(formatted);
+    
     return formatted;
-  };
+  }
 
   const handleValidatePhone = () => {
     const extractPhone = extractNumbersStringManip(phone);
@@ -260,23 +267,6 @@ function App() {
     }
   };
 
-  // const handleDownload = useCallback(() => {
-  //   console.log("In DOWNLOAD");
-  //   if (recordedChunks.length) {
-  //     console.log("Start Downloading");
-  //     const blob = new Blob(recordedChunks, {
-  //       type: 'video/webm',
-  //     });
-  //     const url = URL.createObjectURL(blob);
-  //     const a = document.createElement('a');
-  //     document.body.appendChild(a);
-  //     a.href = url;
-  //     a.download = 'react-webcam-stream-capture.webm';
-  //     a.click();
-  //     window.URL.revokeObjectURL(url);
-  //   }
-  // }, [recordedChunks]);
-
   const uploadFileRequest = useCallback(async (fileName: string) => {
     console.log("IN UPLOAD", recordedChunks.length);
     if (recordedChunks.length) {
@@ -308,6 +298,29 @@ function App() {
       }
     }
   }, [recordedChunks, startConfesion]);
+
+  // const handleDownload = useCallback(() => {
+  //   console.log("In DOWNLOAD");
+  //   if (recordedChunks.length) {
+  //     console.log("Start Downloading");
+  //     const blob = new Blob(recordedChunks, {
+  //       type: 'video/webm',
+  //     });
+  //     const url = URL.createObjectURL(blob);
+  //     const a = document.createElement('a');
+  //     document.body.appendChild(a);
+  //     a.href = url;
+  //     a.download = 'react-webcam-stream-capture.webm';
+  //     a.click();
+  //     window.URL.revokeObjectURL(url);
+  //   }
+  // }, [recordedChunks]);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.value = phone;
+    }
+  }, [phone]);
 
   useEffect(() => {
     if(soundTrack.length === 3){
