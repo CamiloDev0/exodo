@@ -242,7 +242,7 @@ function App() {
     if (webcamRef.current && webcamRef.current.stream) {
       console.log("Start Recording");
       mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
-        mimeType: 'video/webm',
+        mimeType: 'video/mp4',
       });
       mediaRecorderRef.current.addEventListener(
         TYPE_LISTENER,
@@ -376,7 +376,7 @@ function App() {
     <div className="container">
       {renderScreen()}
       {screenActive >= 3 &&
-      <div className='webcam-container' >
+      <div className='webcam-container' style={{zIndex:screenActive === 5 ? '1' : '-1'}}>
         <Webcam
           width={'100%'}
           height={'100%'}
