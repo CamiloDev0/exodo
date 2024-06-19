@@ -22,8 +22,8 @@ function App() {
   const mediaRecorderRef: React.MutableRefObject<MediaRecorder | null> = useRef(null);
   
   const videoConstraints = {
-    width: 820,
-    height: 870,
+    width: 1310,
+    height: 1410,
     facingMode: 'user',
   };
 
@@ -376,8 +376,8 @@ function App() {
       {screenActive >= 3 &&
       <div className='webcam-container' style={{zIndex:screenActive === 5 ? '1' : '-1'}}>
         <Webcam
-          width={'820'}
-          height={'870'}
+          width={'1310'}
+          height={'1410'}
           style={{ objectFit: 'fill' }}
           audio
           ref={webcamRef}

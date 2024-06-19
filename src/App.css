@@ -39,10 +39,10 @@
 
 .langSelector{
   /* border: solid 1px gray; */
-  width: 20rem;
-  height: 5rem;
+  width: 35rem;
+  height: 15rem;
   position: absolute;
-  bottom: 4rem;
+  bottom: 3rem;
 }
 
 .one{
@@ -63,17 +63,17 @@
 
 .phone{
   position: absolute;
-    bottom: 4.1rem;
-    height: 4rem;
-    width: 45vw;
-    left: 16.7rem;
-    border: none;
-    background: transparent;
-    color: white;
-    font-family: 'UncerFelt';
-    font-size: xxx-large;
-    font-weight: 900;
-    text-align: center;
+  bottom: 7rem;
+  height: 7rem;
+  width: 45rem;
+  left: 27rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-family: 'UncerFelt';
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
 }
 
 .phone:focus{
@@ -95,9 +95,9 @@
 .go-step-3{
   position: absolute;
   /* border: solid 1px gray; */
-  width: 13rem;
+  width: 23rem;
   height: 11rem;
-  bottom: 0;
+  bottom: 4rem;
   right: 0;
 }
 
@@ -111,11 +111,11 @@
 
 .grid-sound-track{
   width: 100vw;
-  height: 100vh;
-  display: ruby-text;
-  /* align-items: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-around; */
+  justify-content: space-around;
 }
 
 .sound-track{
@@ -153,8 +153,8 @@
 
 .disc{
   /* border: solid 1px gray; */
-  width: 22rem;
-  height: 23rem;
+  width: 35rem;
+  height: 28rem;
   position: absolute;
   left: 33%;
   top: 23%;
@@ -173,7 +173,7 @@
 .timeline{
   /* border: solid 2px red; */
   position: absolute;
-  height: 5.7rem;
+  height: 9rem;
   top: 56.1%;
   left: 15.5%;
   border-radius: 30px;
@@ -202,14 +202,14 @@
 }
 
 @keyframes aumentarAncho {
-  to { width: 44rem; } /* Ancho final (ajústalo según tus necesidades) */
+  to { width: 70rem; } /* Ancho final (ajústalo según tus necesidades) */
 }
 
 .trackSelected{
   /* border: solid 1px blue; */
-  width: 40rem;
+  width: 70rem;
   position: absolute;
-  height: 20rem;
+  height: 30rem;
   top: 70%;
   left: 17%;
   background-size: contain;
@@ -338,9 +338,9 @@
   /* border: solid 2px red; */
   position: absolute;
   /* width: 0rem; */
-  height: 5rem;
+  height: 8rem;
   left: 13%;
-  bottom: 3.3rem;
+  bottom: 5.3rem;
   border-radius: 30px;
   background: #e6dcca;
   /* animation: aumentarAnchoVideo 15s steps(20) forwards;  */
@@ -352,7 +352,7 @@
 }
 
 @keyframes aumentarAnchoVideo {
-  to { width: 39rem; } /* Ancho final (ajústalo según tus necesidades) */
+  to { width: 60rem; } /* Ancho final (ajústalo según tus necesidades) */
 }
 
 video {
@@ -371,14 +371,14 @@ video {
   font-family: 'UncerFelt', 'FeltWoman';
   text-transform: uppercase;
   text-align: center;
-  font-size: 4.6rem;
+  font-size: 8rem;
   font-weight: 700;
   background-color: #000;
   color: #e6dcca;
   position: absolute;
   z-index: 2;
-  width: 820px;
-  height: 890px;
+  width: 1310px;
+  height: 1430px;
   top: 18%;
   left: 10%;
 }
