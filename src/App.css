@@ -101,17 +101,13 @@
   position: absolute;
   /* border: solid 1px gray; */
   width: 14rem;
-height: 5rem;
-bottom: 1rem;
-right: 1rem;
+  height: 5rem;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .three{
   background-image: url('/3.webp');
-}
-
-.threeen{
-  background-image: url('/3en.webp');
 }
 
 .grid-sound-track{
@@ -121,6 +117,7 @@ right: 1rem;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 6rem;
 }
 
 .sound-track{
@@ -142,16 +139,16 @@ right: 1rem;
   width: 100%;
   background-size: contain;
   background-position: center;
-  /* background-repeat: no-repeat; */
-  background-image: url('/back.webp');
+  /* background-repeat: no-repeat; 
+  background-image: url('/back.webp');*/
   font-family: 'UncerFelt', 'FeltWoman';
   text-transform: uppercase;
   text-align: center;
   font-size: 3.5rem;
   font-weight: 700;
   position: absolute;
-  /* bottom: .5rem; */
-  height: 25rem;
+  bottom: 2rem;
+  height: 12rem;
   color: #e6dcca;
 }
 

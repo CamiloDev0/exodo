@@ -27,6 +27,10 @@ function App() {
     facingMode: 'user',
   };
 
+  const audioConstraints = {
+    echoCancellation: true,
+  };
+
   const TYPE_LISTENER = 'dataavailable';
 
   const renderScreen = ( ) => {
@@ -69,7 +73,7 @@ function App() {
       case 3://screen three [ OK ]
         return(
           <div
-            className={`screen ${ screenActive === 3 && 'active' } three${lang}`}
+            className={`screen ${ screenActive === 3 && 'active' } three`}
           >
             <div className="grid-sound-track">
               <div className={`sound-track ${soundTrack.includes(1) && 'track-selected'}`} onClick={() => { handleAddTrack(1); }}></div>
@@ -238,7 +242,7 @@ function App() {
     if (webcamRef.current && webcamRef.current.stream) {
       console.log("Start Recording");
       mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
-        mimeType: 'video/webm;codecs=vp9',
+        mimeType: 'video/webm',
       });
       mediaRecorderRef.current.addEventListener(
         TYPE_LISTENER,
@@ -372,7 +376,7 @@ function App() {
     <div className="container">
       {renderScreen()}
       {screenActive >= 3 &&
-      <div className='webcam-container' style={{zIndex:screenActive === 5 ? '1' : '-1'}}>
+      <div className='webcam-container' >
         <Webcam
           width={'100%'}
           height={'100%'}
@@ -380,7 +384,7 @@ function App() {
           audio
           ref={webcamRef}
           videoConstraints={videoConstraints}
-          audioConstraints
+          audioConstraints={audioConstraints}
         />
       </div>
       }
