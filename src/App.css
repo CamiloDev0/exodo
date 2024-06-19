@@ -148,8 +148,34 @@
   font-weight: 700;
   position: absolute;
   bottom: 0;
-  height: 10rem;
+  height: 14rem;
   color: #e6dcca;
+}
+
+/* iPad 10.2 pulgadas (aspect ratio 3:2) en modo retrato */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait)
+  and (min-device-height: 1024px) 
+  and (max-device-height: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .mi-div {
+        height: 10rem !important; /* Altura deseada */
+    }
+}
+
+/* iPad 10.5 pulgadas (aspect ratio 4:3) en modo retrato */
+@media only screen 
+  and (min-device-width: 810px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait)
+  and (min-device-height: 1080px) 
+  and (max-device-height: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .mi-div {
+        height: 12rem !important; /* Altura deseada */
+    }
 }
 
 .webcam-container{
