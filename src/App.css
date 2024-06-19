@@ -45,7 +45,7 @@
 .langSelector{
   /* border: solid 1px gray; */
   width: 20rem;
-  height: 12rem;
+  height: 100%;
   position: absolute;
   bottom: 0;
 }
@@ -101,7 +101,7 @@
   position: absolute;
   /* border: solid 1px gray; */
   width: 14rem;
-  height: 10rem;
+  height: 100%;
   bottom: 0;
   right: 1rem;
 }
@@ -147,8 +147,8 @@
   font-size: 3.5rem;
   font-weight: 700;
   position: absolute;
-  bottom: 2rem;
-  height: 12rem;
+  bottom: 0;
+  height: 10rem;
   color: #e6dcca;
 }
 
