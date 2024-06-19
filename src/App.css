@@ -45,9 +45,9 @@
 .langSelector{
   /* border: solid 1px gray; */
   width: 20rem;
-  height: 5rem;
+  height: 12rem;
   position: absolute;
-  bottom: 5rem;
+  bottom: 0;
 }
 
 .one{
@@ -69,7 +69,7 @@
 .phone{
   position: absolute;
   bottom: 5rem;
-  max-height: 3rem;
+  /* max-height: 3rem; */
   width: 19rem;
   left: 15rem;
   border: none;
@@ -101,8 +101,8 @@
   position: absolute;
   /* border: solid 1px gray; */
   width: 14rem;
-  height: 5rem;
-  bottom: 5rem;
+  height: 10rem;
+  bottom: 0;
   right: 1rem;
 }
 
